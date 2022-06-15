@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    flex: auto;
+}
+
+img {
+    height: 80vh;
+}
