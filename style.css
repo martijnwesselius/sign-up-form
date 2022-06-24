@@ -64,6 +64,7 @@ main {
     flex-direction: column;
     justify-content: center;
     background: var(--dark-grey);
+    /* overflow: auto; */
 }
 
 .info-container,
@@ -88,8 +89,7 @@ main {
 
 .input-container {
     width: 100%;
-    background: var(--blue-grey);
-    
+    background: var(--blue-grey);  
 }
 
 .input-container > div {
@@ -97,6 +97,7 @@ main {
 }
 
 .input-container p {
+    color: var(--dark-grey);
     font-size: 1.3rem;
     margin-bottom: 10px;
 }
@@ -156,7 +157,7 @@ label {
 }
 
 button {
-    /* color: var(--dark-grey); */
+    color: var(--dark-grey);
     font-size: 1.3rem;
     background-color: var(--accent);
     padding: 5px;
@@ -168,9 +169,16 @@ button:hover {
     cursor: pointer;
 }
 
+button:active {
+    filter: brightness(85%);
+}
+
 a {
     color: var(--accent);
 }
+
+
+
 
 @media only screen and (max-width: 900px) {
 
