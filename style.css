@@ -37,7 +37,7 @@ p {
 .side-hero header {
     width: 100%;
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -68,9 +68,8 @@ main {
 }
 
 .info-container,
-.input-container,
 .submit-container {
-    height: calc(100vh / 3);
+    height: calc(100vh / 10 * 3);
 }
 
 .info-container {
@@ -88,6 +87,7 @@ main {
 }
 
 .input-container {
+    height: calc(100vh / 10 * 4);
     width: 100%;
     background: var(--blue-grey);  
 }
@@ -110,13 +110,12 @@ form {
 }
 
 .input {
-
     display: flex;
     flex-flow: column wrap;
-    text-transform: uppercase;
     width: 15rem;
     gap: 5px;
     color: white;
+    text-transform: uppercase;
     background-color: var(--dark-grey);
     padding: 5px;
     border-radius: 5px;
@@ -136,12 +135,20 @@ input:focus {
     border: 2px solid var(--accent);
 }
 
+/* input:invalid {
+    border-color: red;
+} */
+
 
 label {
     font-size: 0.9rem;
+
 }
 
-
+.error {
+    font-size: 0.7rem;
+    color: red;
+}
 
 
 .submit-container {
@@ -169,14 +176,14 @@ button:hover {
     cursor: pointer;
 }
 
-button:active {
-    filter: brightness(85%);
-}
-
 a {
     color: var(--accent);
 }
 
+button:active,
+a:active {
+    filter: brightness(85%);
+}
 
 
 
