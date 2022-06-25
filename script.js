@@ -17,7 +17,7 @@ lastNameInput.oninput = () => validateLastName();
 emailInput.oninput = () => validateEmail();
 phoneInput.oninput = () => validatePhone();
 passwordInput.oninput = () => validatePassword();
-// passwordInput.oninput = () => confirmPassword();
+// passwordInput.oninput = () => confirmPassword(); --> unable to give 2 oninput arguments to same element
 passwordConfirm.oninput = () => confirmPassword();
 
 // https://www.html5pattern.com/

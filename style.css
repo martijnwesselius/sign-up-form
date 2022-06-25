@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 :root {
     --blue-grey: rgb(169, 175, 178);
     --dark-grey: rgb(57, 64, 71);
     --dark-grey-transparent: rgba(57, 64, 71, 0.7);
-    --accent: rgb(245, 220, 52);
+    --accent: rgb(255, 213, 29);
+    --black: black;
+    --white: white;
+    --shadow: rgb(46, 46, 46);
+    --error: rgb(245, 34, 34);
 }
 
 * {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     padding: 0;
     margin: 0;
@@ -16,27 +22,23 @@ body {
     display: flex;
 }
 
-div {
-    display: block;
-}
-
 p {
     padding: 0.5rem 0;
-    color: white;
+    color: var(--white);
 }
 
 .side-hero {
     height: 100vh;
     width: 35vw;
     position: relative;
-    background: url("porsche_banner_dima_panyukov.jpeg");
+    background: url("images/porsche_banner_dima_panyukov.jpeg");
     background-position: center;
     background-size: cover;
 }
 
-.side-hero header {
-    width: 100%;
+header {
     position: absolute;
+    width: 100%;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -54,7 +56,18 @@ header img {
 
 header p {
     font-size: 3rem;
-    color: white;
+    font-weight: bolder;
+}
+
+footer {
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer p {
+    font-size: 0.8rem;
 }
 
 main {
@@ -64,12 +77,11 @@ main {
     flex-direction: column;
     justify-content: center;
     background: var(--dark-grey);
-    /* overflow: auto; */
 }
 
 .info-container,
 .submit-container {
-    height: calc(100vh / 10 * 3);
+    height: 30vh;
 }
 
 .info-container {
@@ -79,27 +91,28 @@ main {
 .info-container div {
     position: absolute;
     bottom: 0;
-    padding: 1rem 2vw;
+    padding: 1rem 5vw;
 }
 
 .info-container p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .input-container {
-    height: calc(100vh / 10 * 4);
+    height: 45vh;
     width: 100%;
     background: var(--blue-grey);  
+    box-shadow: 0 5px 5px var(--shadow);
 }
 
 .input-container > div {
-    padding: 1rem 2vw;
+    padding: 2rem 3vw;
 }
 
 .input-container p {
-    color: var(--dark-grey);
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+    color: var(--black);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 form {
@@ -114,7 +127,7 @@ form {
     flex-flow: column wrap;
     width: 15rem;
     gap: 5px;
-    color: white;
+    color: var(--white);
     text-transform: uppercase;
     background-color: var(--dark-grey);
     padding: 5px;
@@ -135,21 +148,14 @@ input:focus {
     border: 2px solid var(--accent);
 }
 
-/* input:invalid {
-    border-color: red;
-} */
-
-
 label {
     font-size: 0.9rem;
-
 }
 
 .error {
     font-size: 0.7rem;
-    color: red;
+    color: var(--error);
 }
-
 
 .submit-container {
     display: flex;
@@ -160,16 +166,17 @@ label {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 1rem 2vw;
+    padding: 1rem 5vw;
 }
 
 button {
-    color: var(--dark-grey);
-    font-size: 1.3rem;
+    color: var(--black);
+    font-size: 1.5rem;
     background-color: var(--accent);
     padding: 5px;
     border: 1px solid var(--accent);
     border-radius: 5px;
+    box-shadow: 0 5px 5px 1px var(--shadow);
 }
 
 button:hover {
@@ -187,17 +194,16 @@ a:active {
 
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 960px) {
 
     body {
         display: flex;
         flex-direction: column;
-        
     }
 
     .side-hero {
         position: static;
-        height: calc(100vh / 5 * 2);
+        height: 40vh;
         width: 100vw;
     }
 
@@ -217,23 +223,29 @@ a:active {
         font-size: 2rem;
     }
 
+    footer {
+        top: 10%;
+    }
+
     main {
         height: auto;
         width: 100vw;
     }
 
-    .info-container {
-        height: auto;
-    }
-
+    .info-container,
     .input-container,
-    .submit-container {
+    .submit-container  {
+        position: static;
         height: auto;
         overflow: auto;
     }
 
-    .submit-container {
-        padding: 0 0 auto 0;
+    .info-container div {
+        position: static;
+    }
+
+    .input {
+        width: 13rem;
     }
 
 }
